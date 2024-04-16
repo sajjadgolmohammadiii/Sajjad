@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 144.6, "left": 37.8, "attrs": {} },
+    { "type": "wokwi-7segment", "id": "sevseg1", "top": 14.58, "left": 14.68, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 23.15,
+      "left": 134.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 80.75,
+      "left": 134.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 61.55,
+      "left": 134.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": 42.35,
+      "left": 134.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r5",
+      "top": 3.95,
+      "left": 134.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r7",
+      "top": 99.95,
+      "left": 134.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r8",
+      "top": -15.25,
+      "left": 134.4,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "uno:3.3V", "sevseg1:COM.1", "green", [ "v28.7", "h-159", "v-240", "h57.6" ] ],
+    [ "sevseg1:A", "r8:1", "green", [ "v0" ] ],
+    [ "sevseg1:B", "r5:1", "green", [ "v0" ] ],
+    [ "sevseg1:C", "r1:1", "green", [ "v9.6", "h19.2", "v-67.2" ] ],
+    [ "sevseg1:D", "r4:1", "green", [ "v19.2", "h57.6", "v-57.6" ] ],
+    [ "r4:2", "uno:4", "green", [ "v0", "h66" ] ],
+    [ "sevseg1:E", "r3:1", "green", [ "v28.8", "h76.8", "v-48" ] ],
+    [ "r3:2", "uno:5", "green", [ "v0", "h66" ] ],
+    [ "sevseg1:F", "r2:1", "green", [ "v-8.76", "h-19.2", "v115.2", "h96", "v-38.4" ] ],
+    [ "r2:2", "uno:6", "green", [ "v0", "h56.4" ] ],
+    [ "sevseg1:G", "r7:1", "green", [ "v0.84", "h-19.2", "v115.2", "h115.2", "v-28.8" ] ],
+    [ "r7:2", "uno:7", "green", [ "v0", "h46.8" ] ],
+    [ "r8:2", "uno:1", "green", [ "v0" ] ],
+    [ "r5:2", "uno:2", "green", [ "v0" ] ],
+    [ "r1:2", "uno:3", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
